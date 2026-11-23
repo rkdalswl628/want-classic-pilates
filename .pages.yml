@@ -1,0 +1,153 @@
+media:
+  - name: images
+    label: Studio images
+    input: media/images
+    output: /media/images
+    extensions: [jpg, jpeg, png, webp]
+    categories: [image]
+    rename: safe
+content:
+  - name: site
+    label: Homepage content
+    type: file
+    path: content/site.json
+    format: json
+    fields:
+      - name: brandName
+        label: Brand name
+        type: string
+      - name: brandSub
+        label: Brand subtitle
+        type: string
+      - name: seoDescription
+        label: Search description (SEO)
+        type: text
+      - name: heroEyebrow
+        label: Main small heading
+        type: string
+      - name: heroTitle
+        label: Main English title (use line break if needed)
+        type: string
+      - name: heroSubtitle
+        label: Main Korean subtitle
+        type: string
+      - name: heroCopy
+        label: Main introduction
+        type: text
+      - name: heroImage
+        label: Main studio photo
+        type: image
+        options:
+          media: images
+          path: media/images
+      - name: aboutIntro
+        label: About short introduction
+        type: text
+      - name: aboutHeading
+        label: About headline
+        type: string
+      - name: aboutBody
+        label: About description
+        type: text
+      - name: aboutImage
+        label: About photo
+        type: image
+        options:
+          media: images
+          path: media/images
+      - name: credential
+        label: Instructor qualification
+        type: string
+      - name: credentialNote
+        label: Instructor note
+        type: string
+      - name: programIntro
+        label: Program introduction
+        type: text
+      - name: p1Title
+        label: Private lesson title
+        type: string
+      - name: p1Body
+        label: Private lesson description
+        type: text
+      - name: p2Title
+        label: Duet lesson title
+        type: string
+      - name: p2Body
+        label: Duet lesson description
+        type: text
+      - name: p3Title
+        label: Small group lesson title
+        type: string
+      - name: p3Body
+        label: Small group lesson description
+        type: text
+      - name: equipmentIntro
+        label: Equipment introduction
+        type: text
+      - name: e1
+        label: Equipment 1
+        type: string
+      - name: e2
+        label: Equipment 2
+        type: string
+      - name: e3
+        label: Equipment 3
+        type: string
+      - name: e4
+        label: Equipment 4
+        type: string
+      - name: equipmentNote
+        label: Equipment note
+        type: text
+      - name: quote
+        label: Studio quote
+        type: text
+      - name: quoteBy
+        label: Quote subtitle
+        type: string
+      - name: locationIntro
+        label: Location introduction
+        type: text
+      - name: locationImage
+        label: Location photo
+        type: image
+        options:
+          media: images
+          path: media/images
+      - name: address
+        label: Full address
+        type: string
+      - name: hours
+        label: Business hours
+        type: text
+      - name: phone
+        label: Phone number
+        type: string
+      - name: instagram
+        label: Instagram URL
+        type: string
+      - name: instagramText
+        label: Instagram link text
+        type: string
+      - name: locationNote
+        label: Location note
+        type: text
+      - name: contactHeading
+        label: Contact headline
+        type: string
+      - name: contactCopy
+        label: Contact description
+        type: text
+      - name: contactUrl
+        label: Contact button URL (Kakao/Naver/phone)
+        type: string
+      - name: contactLabel
+        label: Contact button text
+        type: string
+      - name: navContactUrl
+        label: Header contact button URL
+        type: string
+      - name: footerSub
+        label: Footer subtitle
+        type: string
