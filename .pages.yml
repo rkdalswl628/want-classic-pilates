@@ -1,7 +1,7 @@
 media:
   - name: images
     label: Studio images
-    input: media/images
+    input: want_classic_pilates_cms/media/images
     output: /media/images
     extensions: [jpg, jpeg, png, webp]
     categories: [image]
@@ -10,7 +10,7 @@ content:
   - name: site
     label: Homepage content
     type: file
-    path: content/site.json
+    path: want_classic_pilates_cms/content/site.json
     format: json
     fields:
       - name: brandName
@@ -114,7 +114,7 @@ content:
         type: image
         options:
           media: images
-          path: media/images
+          path: want_classic_pilates_cms/media/images
       - name: address
         label: Full address
         type: string
