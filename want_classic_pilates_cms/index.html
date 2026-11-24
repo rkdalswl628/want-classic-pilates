@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="ko">
 <head>
@@ -135,7 +136,7 @@ footer{padding:26px 0;background:#26221e;color:#b8aea3;font-size:10px;letter-spa
 <div class="info-row"><b>INSTAGRAM</b><span id="instagramText">인스타그램 주소를 입력해 주세요.</span></div>
 <p class="notice" id="locationNote">방문 전 예약 및 운영 여부를 확인해 주세요.</p></div></div>
 </div></section>
-<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">START YOUR CLASSICAL JOURNEY</div><h2 id="contactHeading">Discover the art<br>of classical movement.</h2><p id="contactCopy">수업 문의 및 등록 상담은 센터 공식 채널을 통해 안내해 드립니다.</p><a class="btn" id="contactButton" href="#location">CONTACT &amp; VISIT</a></div></section>
+<section class="contact" id="contact"><div class="wrap"><div class="eyebrow">START YOUR CLASSICAL JOURNEY</div><h2 id="contactHeading">Discover the art<br>of classical movement.</h2><p id="contactCopy">수업 문의 및 등록 상담은 센터 공식 채널을 통해 안내해 드립니다.</p><a class="btn" id="contactButton" href="https://pf.kakao.com/_mPHWb/chat" target="_blank" rel="noopener noreferrer">CONTACT &amp; VISIT</a></div></section>
 </main>
 <footer><div class="wrap footer"><span id="footerName">© WANT CLASSIC PILATES. ALL RIGHTS RESERVED.</span><span id="footerSub">ROMANA'S PILATES STUDIO · SAMSONG, GOYANG</span></div></footer>
 <script>
@@ -160,7 +161,7 @@ const fallback={
  phone:"010-3323-0628",instagram:"https://www.instagram.com/want_classicpilates",instagramText:"want_classicpilates",
  locationNote:"방문 전 예약 및 운영 여부를 확인해 주세요.",
  contactHeading:"Discover the art of classical movement.",contactCopy:"수업 문의 및 등록 상담은 센터 공식 채널을 통해 안내해 드립니다.",
- contactUrl:"#location",contactLabel:"CONTACT & VISIT",navContactUrl:"#contact",
+ contactUrl:"https://pf.kakao.com/_mPHWb/chat",contactLabel:"CONTACT & VISIT",navContactUrl:"#contact",
  heroImages:[],aboutImages:[],locationImage:"",footerSub:"ROMANA'S PILATES STUDIO · SAMSONG, GOYANG"
 };
 function setText(id,value){const el=document.getElementById(id);if(el&&value!==undefined&&value!==null)el.textContent=value}
@@ -196,7 +197,10 @@ function applyContent(data){
  ["heroCopy","aboutIntro","aboutHeading","aboutBody","credential","credentialNote","programIntro","p1Title","p1Body","p2Title","p2Body","p3Title","p3Body","equipmentIntro","e1","e2","e3","e4","equipmentNote","quote","quoteBy","locationIntro","address","hours","phone","instagramText","locationNote","contactHeading","contactCopy","footerSub"].forEach(k=>setText(k,x[k]));
  setText("footerName","© "+(x.brandName||fallback.brandName)+". ALL RIGHTS RESERVED.");
  setGallery("heroPhoto",x.heroImages);setGallery("aboutPhoto",x.aboutImages);setImage("locationPhoto",x.locationImage);
- setLink("contactButton",x.contactUrl||"#location");setText("contactButton",x.contactLabel||fallback.contactLabel);
+ setLink("contactButton",x.contactUrl||fallback.contactUrl);
+ const contactButton=document.getElementById("contactButton");
+ if(contactButton){contactButton.target="_blank";contactButton.rel="noopener noreferrer";}
+ setText("contactButton",x.contactLabel||fallback.contactLabel);
  setLink("navContact",x.navContactUrl||"#contact");
  if(x.instagram){const a=document.createElement("a");a.href=x.instagram;a.target="_blank";a.rel="noopener noreferrer";a.textContent=x.instagramText||"인스타그램 바로가기";const old=document.getElementById("instagramText");if(old)old.replaceWith(a);}
  if(x.phone){const a=document.createElement("a");a.href="tel:"+String(x.phone).replace(/[^0-9+]/g,"");a.textContent=x.phone;const old=document.getElementById("phone");if(old)old.replaceWith(a);}
