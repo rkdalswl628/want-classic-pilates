@@ -1,3 +1,4 @@
+
 media:
   - name: images
     label: Studio images
@@ -6,6 +7,7 @@ media:
     extensions: [jpg, jpeg, png, webp]
     categories: [image]
     rename: safe
+
 content:
   - name: site
     label: Homepage content
@@ -26,7 +28,7 @@ content:
         label: Main small heading
         type: string
       - name: heroTitle
-        label: Main English title (use line break if needed)
+        label: Main English title
         type: string
       - name: heroSubtitle
         label: Main Korean subtitle
@@ -34,12 +36,14 @@ content:
       - name: heroCopy
         label: Main introduction
         type: text
-      - name: heroImage
-        label: Main studio photo
+      - name: heroImages
+        label: Main studio photos (up to 4)
         type: image
         options:
           media: images
-          path: media/images
+          path: want_classic_pilates_cms/media/images
+          multiple:
+            max: 4
       - name: aboutIntro
         label: About short introduction
         type: text
@@ -49,12 +53,14 @@ content:
       - name: aboutBody
         label: About description
         type: text
-      - name: aboutImage
-        label: About photo
+      - name: aboutImages
+        label: About photos (up to 4)
         type: image
         options:
           media: images
-          path: media/images
+          path: want_classic_pilates_cms/media/images
+          multiple:
+            max: 4
       - name: credential
         label: Instructor qualification
         type: string
@@ -110,7 +116,7 @@ content:
         label: Location introduction
         type: text
       - name: locationImage
-        label: Location photo
+        label: Location map image
         type: image
         options:
           media: images
@@ -140,7 +146,7 @@ content:
         label: Contact description
         type: text
       - name: contactUrl
-        label: Contact button URL (Kakao/Naver/phone)
+        label: Contact button URL
         type: string
       - name: contactLabel
         label: Contact button text
