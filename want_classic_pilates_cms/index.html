@@ -2,284 +2,94 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>WANT CLASSIC PILATES | 삼송역 클래식 필라테스</title>
-  <meta name="description" content="삼송역 클래식 필라테스 전문 스튜디오 WANT CLASSIC PILATES. Romana's Pilates 기반의 정통 클래식 필라테스를 경험하세요.">
-  <meta name="theme-color" content="#f5f2ed">
-  <style>
-    :root {
-      --bg: #f5f2ed;
-      --paper: #fbfaf7;
-      --ink: #292722;
-      --muted: #777168;
-      --line: #ded9d0;
-      --accent: #a18d75;
-      --serif: Georgia, "Times New Roman", serif;
-      --sans: "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
-    }
-
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--bg);
-      font-family: var(--sans);
-      line-height: 1.7;
-    }
-    a { color: inherit; text-decoration: none; }
-    img { display: block; width: 100%; object-fit: cover; }
-    button { font: inherit; }
-
-    .header {
-      position: sticky;
-      top: 0;
-      z-index: 20;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 7%;
-      background: rgba(245,242,237,.94);
-      border-bottom: 1px solid var(--line);
-      backdrop-filter: blur(12px);
-    }
-    .logo {
-      font-family: var(--serif);
-      font-size: 21px;
-      letter-spacing: 2px;
-      line-height: 1.2;
-    }
-    .logo small {
-      display: block;
-      margin-top: 5px;
-      font-family: var(--sans);
-      font-size: 9px;
-      letter-spacing: 2.5px;
-      color: var(--muted);
-    }
-    .nav {
-      display: flex;
-      gap: 30px;
-      align-items: center;
-      font-size: 11px;
-      letter-spacing: 1.5px;
-    }
-    .nav a:hover { color: var(--accent); }
-
-    .hero {
-      min-height: 690px;
-      display: grid;
-      grid-template-columns: 43% 57%;
-      padding: 45px 7% 65px;
-      gap: 5%;
-      align-items: center;
-    }
-    .eyebrow {
-      color: var(--accent);
-      font-size: 10px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-    }
-    .hero h1 {
-      margin: 22px 0;
-      font-family: var(--serif);
-      font-size: clamp(58px, 8vw, 112px);
-      line-height: .92;
-      font-weight: 400;
-      letter-spacing: -3px;
-      white-space: pre-line;
-    }
-    .hero-subtitle {
-      font-size: 16px;
-      letter-spacing: 1px;
-      margin-bottom: 18px;
-    }
-    .hero-copy {
-      max-width: 390px;
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 2;
-    }
-    .hero-link {
-      display: inline-block;
-      margin-top: 28px;
-      padding-bottom: 7px;
-      border-bottom: 1px solid var(--ink);
-      font-size: 10px;
-      letter-spacing: 2px;
-    }
-    .hero-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      align-items: center;
-    }
-    .hero-gallery img {
-      height: 245px;
-      background: #e7e1d8;
-    }
-    .hero-gallery img:nth-child(2),
-    .hero-gallery img:nth-child(4) { margin-top: 38px; }
-
-    section { padding: 100px 7%; }
-    .section-label {
-      color: var(--accent);
-      font-size: 10px;
-      letter-spacing: 3px;
-      margin-bottom: 15px;
-    }
-    .section-title {
-      font-family: var(--serif);
-      font-size: clamp(36px, 5vw, 58px);
-      font-weight: 400;
-      line-height: 1.15;
-      margin: 0 0 25px;
-    }
-    .about {
-      background: var(--paper);
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8%;
-      align-items: center;
-    }
-    .about-copy {
-      color: var(--muted);
-      font-size: 13px;
-      line-height: 2.1;
-      white-space: pre-line;
-    }
-    .about-gallery {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-    }
-    .about-gallery img { height: 220px; }
-
-    .credential {
-      text-align: center;
-      background: #eae5dc;
-    }
-    .credential h2 {
-      font-family: var(--serif);
-      font-size: clamp(30px, 4vw, 46px);
-      font-weight: 400;
-      margin: 12px 0;
-    }
-    .credential p {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .programs { text-align: center; }
-    .program-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-      margin-top: 45px;
-    }
-    .program {
-      border: 1px solid var(--line);
-      padding: 38px 20px;
-    }
-    .program strong {
-      display: block;
-      font-family: var(--serif);
-      font-size: 30px;
-      font-weight: 400;
-      margin-bottom: 10px;
-    }
-    .program span {
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .equipment {
-      background: var(--paper);
-      text-align: center;
-    }
-    .equipment-list {
-      max-width: 750px;
-      margin: 35px auto 0;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-    .equipment-list span {
-      border: 1px solid var(--line);
-      padding: 10px 20px;
-      color: var(--muted);
-      font-size: 12px;
-    }
-
-    .location {
-      text-align: center;
-    }
-    .location p {
-      color: var(--muted);
-      font-size: 13px;
-      white-space: pre-line;
-    }
-    .location img {
-      max-width: 760px;
-      max-height: 380px;
-      margin: 35px auto;
-      background: #e7e1d8;
-    }
-
-    .contact {
-      text-align: center;
-      background: #eae5dc;
-    }
-    .contact h2 {
-      font-family: var(--serif);
-      font-size: clamp(32px, 5vw, 55px);
-      font-weight: 400;
-      margin: 12px 0;
-    }
-    .contact p {
-      color: var(--muted);
-      font-size: 13px;
-    }
-    .contact-button {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 13px 30px;
-      border: 1px solid var(--ink);
-      font-size: 11px;
-      letter-spacing: 1px;
-    }
-
-    footer {
-      padding: 28px 7%;
-      display: flex;
-      justify-content: space-between;
-      gap: 15px;
-      color: var(--muted);
-      font-size: 10px;
-      letter-spacing: 1px;
-    }
-
-    @media (max-width: 760px) {
-      .header { padding: 16px 5%; }
-      .logo { font-size: 17px; }
-      .nav { gap: 13px; font-size: 9px; }
-      .hero {
-        min-height: auto;
-        grid-template-columns: 1fr;
-        padding: 65px 6%;
-        gap: 40px;
-      }
-      .hero h1 { font-size: 72px; }
-      .hero-gallery img { height: 180px; }
-      section { padding: 75px 6%; }
-      .about { grid-template-columns: 1fr; gap: 35px; }
-      .about-gallery img { height: 160px; }
-      .program-grid { grid-template-columns: 1fr; gap: 10px; }
-      footer { flex-direction: column; text-align: center; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WANT CLASSIC PILATES | 삼송역 클래식 필라테스</title>
+<meta name="description" content="삼송역 클래식 필라테스 전문 스튜디오 WANT CLASSIC PILATES. Romana's Pilates 기반의 정통 클래식 필라테스를 경험하세요.">
+<meta name="theme-color" content="#f5f2ed">
+<style>
+:root {
+  --bg:#f5f2ed;
+  --paper:#fbfaf7;
+  --ink:#292722;
+  --muted:#777168;
+  --line:#ded9d0;
+  --accent:#a18d75;
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:"Helvetica Neue",Arial,"Apple SD Gothic Neo",sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;color:var(--ink);background:var(--bg);font-family:var(--sans);line-height:1.7}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;object-fit:cover}
+button{font:inherit}
+.header{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:20px 7%;background:rgba(245,242,237,.94);
+  border-bottom:1px solid var(--line);backdrop-filter:blur(12px)
+}
+.logo{font-family:var(--serif);font-size:21px;letter-spacing:2px;line-height:1.2}
+.logo small{display:block;margin-top:5px;font-family:var(--sans);font-size:9px;letter-spacing:2.5px;color:var(--muted)}
+.nav{display:flex;gap:30px;align-items:center;font-size:11px;letter-spacing:1.5px}
+.nav a:hover{color:var(--accent)}
+.hero{
+  min-height:690px;display:grid;grid-template-columns:43% 57%;
+  padding:45px 7% 65px;gap:5%;align-items:center
+}
+.eyebrow{color:var(--accent);font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.hero h1{
+  margin:22px 0;font-family:var(--serif);
+  font-size:clamp(58px,8vw,112px);line-height:.92;
+  font-weight:400;letter-spacing:-3px;white-space:pre-line
+}
+.hero-subtitle{font-size:16px;letter-spacing:1px;margin-bottom:18px}
+.hero-copy{max-width:390px;color:var(--muted);font-size:13px;line-height:2}
+.hero-link{display:inline-block;margin-top:28px;padding-bottom:7px;border-bottom:1px solid var(--ink);font-size:10px;letter-spacing:2px}
+.hero-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
+.hero-gallery img{height:245px;background:#e7e1d8}
+.hero-gallery img:nth-child(2),.hero-gallery img:nth-child(4){margin-top:38px}
+section{padding:100px 7%}
+.section-label{color:var(--accent);font-size:10px;letter-spacing:3px;margin-bottom:15px}
+.section-title{font-family:var(--serif);font-size:clamp(36px,5vw,58px);font-weight:400;line-height:1.15;margin:0 0 25px}
+.about{background:var(--paper);display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
+.about-copy{color:var(--muted);font-size:13px;line-height:2.1;white-space:pre-line}
+.about-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.about-gallery img{height:220px}
+.credential{text-align:center;background:#eae5dc}
+.credential h2{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:400;margin:12px 0}
+.credential p{color:var(--muted);font-size:12px}
+.programs{text-align:center}
+.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}
+.program{border:1px solid var(--line);padding:38px 20px}
+.program strong{display:block;font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:10px}
+.program span{color:var(--muted);font-size:12px}
+.equipment{background:var(--paper);text-align:center}
+.equipment-list{max-width:750px;margin:35px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+.equipment-list span{border:1px solid var(--line);padding:10px 20px;color:var(--muted);font-size:12px}
+.location{text-align:center}
+.location p{color:var(--muted);font-size:13px;white-space:pre-line}
+.location img{max-width:760px;max-height:380px;margin:35px auto;background:#e7e1d8}
+.contact{text-align:center;background:#eae5dc}
+.contact h2{font-family:var(--serif);font-size:clamp(32px,5vw,55px);font-weight:400;margin:12px 0}
+.contact p{color:var(--muted);font-size:13px}
+.contact-button{display:inline-block;margin-top:25px;padding:13px 30px;border:1px solid var(--ink);font-size:11px;letter-spacing:1px}
+footer{padding:28px 7%;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:10px;letter-spacing:1px}
+@media(max-width:760px){
+  .header{padding:16px 5%}
+  .logo{font-size:17px}
+  .nav{gap:13px;font-size:9px}
+  .hero{min-height:auto;grid-template-columns:1fr;padding:65px 6%;gap:40px}
+  .hero h1{font-size:72px}
+  .hero-gallery img{height:180px}
+  section{padding:75px 6%}
+  .about{grid-template-columns:1fr;gap:35px}
+  .about-gallery img{height:160px}
+  .program-grid{grid-template-columns:1fr;gap:10px}
+  footer{flex-direction:column;text-align:center}
+}
+</style>
 </head>
 <body>
 
@@ -290,72 +100,72 @@
   </a>
   <nav class="nav">
     <a href="#about">ABOUT</a>
-    <a href="instructor.html">INSTRUCTOR</a>
+    <a href="instructor.html">FOUNDER</a>
     <a href="#programs">PROGRAM</a>
     <a href="#location">LOCATION</a>
   </nav>
 </header>
 
 <main>
-  <div class="hero">
-    <div>
-      <div class="eyebrow" id="heroEyebrow">CLASSICAL PILATES · SAMSONG</div>
-      <h1 id="heroTitle">WANT
+<div class="hero">
+  <div>
+    <div class="eyebrow" id="heroEyebrow">CLASSICAL PILATES · SAMSONG</div>
+    <h1 id="heroTitle">WANT
 CLASSIC</h1>
-      <div class="hero-subtitle" id="heroSubtitle">정통 클래식 필라테스의 움직임을 배우는 공간</div>
-      <p class="hero-copy" id="heroCopy"></p>
-      <a class="hero-link" href="instructor.html">MEET THE INSTRUCTOR →</a>
-    </div>
-    <div class="hero-gallery" id="heroGallery"></div>
+    <div class="hero-subtitle" id="heroSubtitle">정통 클래식 필라테스의 움직임을 배우는 공간</div>
+    <p class="hero-copy" id="heroCopy"></p>
+    <a class="hero-link" href="instructor.html">MEET THE FOUNDER →</a>
   </div>
+  <div class="hero-gallery" id="heroGallery"></div>
+</div>
 
-  <section class="about" id="about">
-    <div>
-      <div class="section-label" id="aboutIntro">ABOUT WANT CLASSIC</div>
-      <h2 class="section-title" id="aboutHeading">The Art of Classical Movement</h2>
-      <p class="about-copy" id="aboutBody"></p>
-    </div>
-    <div class="about-gallery" id="aboutGallery"></div>
-  </section>
+<section class="about" id="about">
+  <div>
+    <div class="section-label" id="aboutIntro">ABOUT WANT CLASSIC</div>
+    <h2 class="section-title" id="aboutHeading">The Art of Classical Movement</h2>
+    <p class="about-copy" id="aboutBody"></p>
+  </div>
+  <div class="about-gallery" id="aboutGallery"></div>
+</section>
 
-  <section class="credential">
-    <div class="section-label">CERTIFICATION</div>
-    <h2 id="credential">Romana's Pilates Level 5</h2>
-    <p id="credentialNote">원장 직접 지도 · 모든 과정 뉴욕에서 수료</p>
-  </section>
+<section class="credential">
+  <div class="section-label">CERTIFICATION</div>
+  <h2 id="credential">Romana's Pilates Level 5</h2>
+  <p id="credentialNote">원장 직접 지도 · 모든 과정 뉴욕에서 수료</p>
+</section>
 
-  <section class="programs" id="programs">
-    <div class="section-label">OUR PROGRAMS</div>
-    <h2 class="section-title">Private & Small Group</h2>
-    <div class="program-grid" id="programGrid">
-      <div class="program"><strong>1:1</strong><span>Private Lesson</span></div>
-      <div class="program"><strong>2:1</strong><span>Duet Lesson</span></div>
-      <div class="program"><strong>3:1</strong><span>Small Group Lesson</span></div>
-    </div>
-  </section>
+<section class="programs" id="programs">
+  <div class="section-label">OUR PROGRAMS</div>
+  <h2 class="section-title">Private & Small Group</h2>
+  <div class="program-grid" id="programGrid">
+    <div class="program"><strong>1:1</strong><span>Private Lesson</span></div>
+    <div class="program"><strong>2:1</strong><span>Duet Lesson</span></div>
+    <div class="program"><strong>3:1</strong><span>Small Group Lesson</span></div>
+  </div>
+</section>
 
-  <section class="equipment">
-    <div class="section-label">CLASSICAL APPARATUS</div>
-    <h2 class="section-title">The Equipment</h2>
-    <div class="equipment-list" id="equipmentList"></div>
-  </section>
+<section class="equipment">
+  <div class="section-label">CLASSICAL APPARATUS</div>
+  <h2 class="section-title">The Equipment</h2>
+  <div class="equipment-list" id="equipmentList"></div>
+</section>
 
-  <section class="location" id="location">
-    <div class="section-label">LOCATION</div>
-    <h2 class="section-title">Visit Our Studio</h2>
-    <p id="address"></p>
-    <p id="hours"></p>
-    <img id="locationImage" alt="WANT CLASSIC PILATES studio location" hidden>
-    <p id="phone"></p>
-    <a class="hero-link" id="instagram" target="_blank" rel="noopener">INSTAGRAM →</a>
-  </section>
+<section class="location" id="location">
+  <div class="section-label">LOCATION</div>
+  <h2 class="section-title">Visit Our Studio</h2>
+  <p id="address"></p>
+  <p id="hours"></p>
+  <img id="locationImage" alt="WANT CLASSIC PILATES studio location" hidden>
+  <p id="phone"></p>
+  <a class="hero-link" id="instagram" target="_blank" rel="noopener">INSTAGRAM →</a>
+</section>
 
-  <section class="contact">
-    <div class="section-label">CONTACT</div>
-    <h2 id="contactHeading">Discover the art of classical movement.</h2>
-    <p id="contactCopy">수업 문의 및 등록 상담은 카카오톡 채널을 통해 안내해 드립니다.</p>
-    <a class="contact-button" id="contactButton" target="_blank" rel="noopener">카카오톡 상담하기</a>
-  </section>
+<section class="contact">
+  <div class="section-label">CONTACT</div>
+  <h2 id="contactHeading">Discover the art of classical movement.</h2>
+  <p id="contactCopy">수업 문의 및 등록 상담은 카카오톡 채널을 통해 안내해 드립니다.</p>
+  <a class="contact-button" id="contactButton" target="_blank" rel="noopener">카카오톡 상담하기</a>
+</section>
 </main>
 
 <footer>
@@ -364,90 +174,91 @@ CLASSIC</h1>
 </footer>
 
 <script>
-  const text = (id, value) => {
-    const el = document.getElementById(id);
-    if (el && value !== undefined && value !== null) el.textContent = value;
-  };
+const setText = (id,value) => {
+  const el=document.getElementById(id);
+  if(el && value!==undefined && value!==null) el.textContent=value;
+};
 
-  const imageList = (id, images) => {
-    const el = document.getElementById(id);
-    if (!el || !Array.isArray(images)) return;
-    el.innerHTML = "";
-    images.forEach(src => {
-      if (!src) return;
-      const img = document.createElement("img");
-      img.src = src;
-      img.alt = "WANT CLASSIC PILATES";
-      img.loading = "lazy";
-      el.appendChild(img);
-    });
-  };
+const imageList = (id,images) => {
+  const el=document.getElementById(id);
+  if(!el || !Array.isArray(images)) return;
+  el.innerHTML="";
+  images.forEach(src=>{
+    if(!src) return;
+    const img=document.createElement("img");
+    img.src=src;
+    img.alt="WANT CLASSIC PILATES";
+    img.loading="lazy";
+    el.appendChild(img);
+  });
+};
 
-  async function loadHomepage() {
-    try {
-      const response = await fetch("content/site.json", { cache: "no-store" });
-      if (!response.ok) throw new Error("Homepage content could not be loaded");
-      const data = await response.json();
+async function loadHomepage(){
+  try{
+    const response=await fetch("content/site.json",{cache:"no-store"});
+    if(!response.ok) throw new Error("Homepage content could not be loaded");
+    const data=await response.json();
 
-      [
-        "heroEyebrow", "heroTitle", "heroSubtitle", "heroCopy",
-        "aboutIntro", "aboutHeading", "aboutBody", "credential",
-        "credentialNote", "address", "hours", "phone",
-        "contactHeading", "contactCopy"
-      ].forEach(key => text(key, data[key]));
+    [
+      "heroEyebrow","heroTitle","heroSubtitle","heroCopy",
+      "aboutIntro","aboutHeading","aboutBody","credential",
+      "credentialNote","address","hours","phone",
+      "contactHeading","contactCopy"
+    ].forEach(key=>setText(key,data[key]));
 
-      imageList("heroGallery", data.heroImages);
-      imageList("aboutGallery", data.aboutImages);
+    imageList("heroGallery",data.heroImages);
+    imageList("aboutGallery",data.aboutImages);
 
-      if (Array.isArray(data.programs)) {
-        const grid = document.getElementById("programGrid");
-        grid.innerHTML = "";
-        data.programs.forEach(item => {
-          const card = document.createElement("div");
-          card.className = "program";
-          const title = document.createElement("strong");
-          const desc = document.createElement("span");
-          title.textContent = item.title || item.name || "";
-          desc.textContent = item.description || item.subtitle || "";
-          card.append(title, desc);
-          grid.appendChild(card);
-        });
-      }
-
-      if (Array.isArray(data.equipment)) {
-        const list = document.getElementById("equipmentList");
-        list.innerHTML = "";
-        data.equipment.forEach(item => {
-          const span = document.createElement("span");
-          span.textContent = typeof item === "string" ? item : (item.name || "");
-          list.appendChild(span);
-        });
-      }
-
-      if (data.locationImage) {
-        const img = document.getElementById("locationImage");
-        img.src = data.locationImage;
-        img.hidden = false;
-      }
-
-      const instagram = document.getElementById("instagram");
-      if (data.instagram) instagram.href = data.instagram;
-      if (data.instagramLabel) instagram.textContent = data.instagramLabel + " →";
-
-      const contact = document.getElementById("contactButton");
-      if (data.contactUrl) contact.href = data.contactUrl;
-      if (data.contactLabel) contact.textContent = data.contactLabel;
-
-      if (data.seoDescription) {
-        document.querySelector('meta[name="description"]').content = data.seoDescription;
-      }
-      if (data.brandName) document.title = data.brandName + " | 삼송역 클래식 필라테스";
-    } catch (error) {
-      console.error(error);
+    if(Array.isArray(data.programs)){
+      const grid=document.getElementById("programGrid");
+      grid.innerHTML="";
+      data.programs.forEach(item=>{
+        const card=document.createElement("div");
+        card.className="program";
+        const title=document.createElement("strong");
+        const desc=document.createElement("span");
+        title.textContent=item.title||item.name||"";
+        desc.textContent=item.description||item.subtitle||"";
+        card.append(title,desc);
+        grid.appendChild(card);
+      });
     }
-  }
 
-  loadHomepage();
+    if(Array.isArray(data.equipment)){
+      const list=document.getElementById("equipmentList");
+      list.innerHTML="";
+      data.equipment.forEach(item=>{
+        const span=document.createElement("span");
+        span.textContent=typeof item==="string"?item:(item.name||"");
+        list.appendChild(span);
+      });
+    }
+
+    if(data.locationImage){
+      const img=document.getElementById("locationImage");
+      img.src=data.locationImage;
+      img.hidden=false;
+    }
+
+    const instagram=document.getElementById("instagram");
+    if(data.instagram) instagram.href=data.instagram;
+    if(data.instagramLabel) instagram.textContent=data.instagramLabel+" →";
+
+    const contact=document.getElementById("contactButton");
+    if(data.contactUrl) contact.href=data.contactUrl;
+    if(data.contactLabel) contact.textContent=data.contactLabel;
+
+    if(data.seoDescription){
+      document.querySelector('meta[name="description"]').content=data.seoDescription;
+    }
+    if(data.brandName){
+      document.title=data.brandName+" | 삼송역 클래식 필라테스";
+    }
+  }catch(error){
+    console.error(error);
+  }
+}
+loadHomepage();
 </script>
 </body>
 </html>
