@@ -1,257 +1,453 @@
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WANT CLASSIC PILATES | 삼송역 클래식 필라테스</title>
+  <meta name="description" content="삼송역 클래식 필라테스 전문 스튜디오 WANT CLASSIC PILATES. Romana's Pilates 기반의 정통 클래식 필라테스를 경험하세요.">
+  <meta name="theme-color" content="#f5f2ed">
+  <style>
+    :root {
+      --bg: #f5f2ed;
+      --paper: #fbfaf7;
+      --ink: #292722;
+      --muted: #777168;
+      --line: #ded9d0;
+      --accent: #a18d75;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Helvetica Neue", Arial, "Apple SD Gothic Neo", sans-serif;
+    }
 
-<meta name="naver-site-verification" content="4150e80e65f38d749558660b523dfc6d0c19eb7d">
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: var(--sans);
+      line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { display: block; width: 100%; object-fit: cover; }
+    button { font: inherit; }
 
-<meta name="description" content="삼송역 클래식 필라테스 전문 스튜디오 WANT CLASSIC PILATES. Romana's Pilates 기반의 정통 클래식 필라테스를 경험하세요.">
-<meta name="robots" content="index,follow">
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 7%;
+      background: rgba(245,242,237,.94);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(12px);
+    }
+    .logo {
+      font-family: var(--serif);
+      font-size: 21px;
+      letter-spacing: 2px;
+      line-height: 1.2;
+    }
+    .logo small {
+      display: block;
+      margin-top: 5px;
+      font-family: var(--sans);
+      font-size: 9px;
+      letter-spacing: 2.5px;
+      color: var(--muted);
+    }
+    .nav {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+    .nav a:hover { color: var(--accent); }
 
-<title>WANT CLASSIC PILATES | 삼송역 클래식 필라테스</title>
+    .hero {
+      min-height: 690px;
+      display: grid;
+      grid-template-columns: 43% 57%;
+      padding: 45px 7% 65px;
+      gap: 5%;
+      align-items: center;
+    }
+    .eyebrow {
+      color: var(--accent);
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+    .hero h1 {
+      margin: 22px 0;
+      font-family: var(--serif);
+      font-size: clamp(58px, 8vw, 112px);
+      line-height: .92;
+      font-weight: 400;
+      letter-spacing: -3px;
+      white-space: pre-line;
+    }
+    .hero-subtitle {
+      font-size: 16px;
+      letter-spacing: 1px;
+      margin-bottom: 18px;
+    }
+    .hero-copy {
+      max-width: 390px;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2;
+    }
+    .hero-link {
+      display: inline-block;
+      margin-top: 28px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--ink);
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+    .hero-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      align-items: center;
+    }
+    .hero-gallery img {
+      height: 245px;
+      background: #e7e1d8;
+    }
+    .hero-gallery img:nth-child(2),
+    .hero-gallery img:nth-child(4) { margin-top: 38px; }
 
-<style>
-:root{
---bg:#f5f1eb;
---cream:#e9e0d4;
---sand:#c9b9a5;
---ink:#302a24;
---muted:#756b60;
---line:#d9d0c5;
---white:#fffdf9;
---accent:#8a725b;
---serif:Georgia,'Times New Roman',serif;
---sans:Arial,'Apple SD Gothic Neo','Noto Sans KR',sans-serif;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.75}
-a{color:inherit;text-decoration:none}
-.wrap{width:min(1160px,calc(100% - 48px));margin:auto}
-.topline{height:5px;background:var(--accent)}
-header{position:sticky;top:0;z-index:10;background:rgba(245,241,235,.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
-.nav{height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{font-family:var(--serif);font-size:18px;letter-spacing:.13em;line-height:1.15}
-.brand small{display:block;font:9px var(--sans);letter-spacing:.25em;color:var(--muted);margin-top:7px}
-.navlinks{display:flex;gap:25px;font-size:11px;letter-spacing:.1em;color:#5e554b}
-.nav-cta{border:1px solid var(--ink);padding:9px 16px;font-size:10px;letter-spacing:.12em}
-.hero{min-height:650px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:6%;padding:70px 0 80px}
-.eyebrow{font-size:10px;letter-spacing:.25em;color:var(--accent);font-weight:700}
-.hero h1{font:400 clamp(48px,6vw,78px)/1.03 var(--serif);letter-spacing:.035em;margin:22px 0}
-.hero h1 span{display:block;font:400 clamp(16px,2vw,21px)/1.6 var(--sans);letter-spacing:.12em;margin-top:20px}
-.hero-copy{max-width:470px;color:var(--muted);font-size:14px;word-break:keep-all}
-.actions{display:flex;gap:12px;margin-top:32px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;font-size:10px;letter-spacing:.12em;border:1px solid var(--ink);cursor:pointer}
-.btn.dark{background:var(--ink);color:var(--white)}
-.hero-photo{min-height:490px;background:var(--cream);overflow:hidden}
-.photo-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(180px,1fr));gap:8px;padding:8px}
-.photo-gallery img{width:100%;height:100%;object-fit:cover}
-section{padding:94px 0}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:40px}
-.section-head h2{font:400 clamp(34px,4vw,48px)/1.12 var(--serif);margin:10px 0 0}
-.section-head p{max-width:430px;color:var(--muted);font-size:13px;margin:0;word-break:keep-all}
-.about{background:var(--white)}
-.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:8%;align-items:center}
-.about-photo{min-height:370px;background:var(--cream);overflow:hidden}
-.about-photo img,.location-photo img{width:100%;height:100%;object-fit:cover}
-.about-text h3{font:400 30px/1.4 var(--serif);margin:0 0 20px}
-.about-text p{font-size:14px;color:var(--muted);white-space:pre-line;word-break:keep-all}
-.credential{margin-top:25px;padding:17px 20px;border-left:2px solid var(--accent);background:var(--bg);font-size:13px}
-.credential b{display:block;margin-bottom:4px}
-.programs{background:#eee8df}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
-.card{background:var(--white);padding:28px 25px;min-height:220px;border:1px solid var(--line)}
-.num{font:14px var(--serif);color:var(--accent)}
-.card h3{font-size:17px;font-weight:500;margin:22px 0 9px}
-.card p{font-size:13px;color:var(--muted);margin:0}
-.equipment{background:var(--white)}
-.equipment-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.equip{background:var(--bg);padding:25px 20px;min-height:135px;display:flex;flex-direction:column;justify-content:space-between}
-.equip strong{font:21px var(--serif);font-weight:400}
-.equip span{font-size:10px;letter-spacing:.12em;color:var(--muted)}
-.philosophy{background:#dcd0c2;text-align:center}
-.philosophy blockquote{font:clamp(26px,4vw,43px)/1.4 var(--serif);max-width:850px;margin:25px auto 18px}
-.philosophy p{font-size:11px;color:#6e6256;letter-spacing:.12em}
-.location{background:var(--bg)}
-.location-grid{display:grid;grid-template-columns:1fr 1fr;gap:7%}
-.location-photo{min-height:290px;background:var(--cream);overflow:hidden}
-.location-info h3{font-size:18px;font-weight:500;margin:0 0 15px}
-.info-row{padding:12px 0;border-bottom:1px solid var(--line);font-size:13px;white-space:pre-line}
-.info-row b{display:inline-block;width:85px;font-weight:500;color:var(--muted)}
-.notice{font-size:11px;color:#8a7c6c;margin-top:15px}
-.contact{background:var(--ink);color:var(--white);text-align:center;padding:85px 0}
-.contact .eyebrow{color:#c7b39d}
-.contact h2{font:400 clamp(35px,5vw,56px)/1.2 var(--serif);margin:17px 0}
-.contact p{color:#c8bfb4;font-size:13px}
-.contact .btn{border-color:#d9cbbb;color:var(--white);margin-top:18px}
-.contact .btn:hover{background:var(--white);color:var(--ink)}
-footer{padding:26px 0;background:#26221e;color:#b8aea3;font-size:10px;letter-spacing:.08em}
-.footer{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}
-@media(max-width:760px){
-.wrap{width:min(100% - 34px,560px)}
-.nav{height:68px}
-.navlinks{display:none}
-.brand{font-size:15px}
-.nav-cta{padding:8px 11px}
-.hero{grid-template-columns:1fr;padding:48px 0 60px;gap:30px}
-.hero-photo{min-height:330px;grid-row:1}
-.hero h1{font-size:53px}
-.hero-copy{font-size:13px}
-section{padding:68px 0}
-.section-head{display:block;margin-bottom:28px}
-.section-head p{margin-top:16px}
-.about-grid,.location-grid{grid-template-columns:1fr;gap:27px}
-.about-photo{min-height:245px}
-.about-text h3{font-size:26px}
-.cards{grid-template-columns:1fr}
-.card{min-height:170px}
-.equipment-grid{grid-template-columns:repeat(2,1fr)}
-.equip{min-height:120px;padding:19px}
-.location-photo{min-height:220px}
-.footer{display:block}
-.footer span{display:block;margin-top:7px}
-}
-</style>
+    section { padding: 100px 7%; }
+    .section-label {
+      color: var(--accent);
+      font-size: 10px;
+      letter-spacing: 3px;
+      margin-bottom: 15px;
+    }
+    .section-title {
+      font-family: var(--serif);
+      font-size: clamp(36px, 5vw, 58px);
+      font-weight: 400;
+      line-height: 1.15;
+      margin: 0 0 25px;
+    }
+    .about {
+      background: var(--paper);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8%;
+      align-items: center;
+    }
+    .about-copy {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 2.1;
+      white-space: pre-line;
+    }
+    .about-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .about-gallery img { height: 220px; }
+
+    .credential {
+      text-align: center;
+      background: #eae5dc;
+    }
+    .credential h2 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 400;
+      margin: 12px 0;
+    }
+    .credential p {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .programs { text-align: center; }
+    .program-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 45px;
+    }
+    .program {
+      border: 1px solid var(--line);
+      padding: 38px 20px;
+    }
+    .program strong {
+      display: block;
+      font-family: var(--serif);
+      font-size: 30px;
+      font-weight: 400;
+      margin-bottom: 10px;
+    }
+    .program span {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .equipment {
+      background: var(--paper);
+      text-align: center;
+    }
+    .equipment-list {
+      max-width: 750px;
+      margin: 35px auto 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .equipment-list span {
+      border: 1px solid var(--line);
+      padding: 10px 20px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .location {
+      text-align: center;
+    }
+    .location p {
+      color: var(--muted);
+      font-size: 13px;
+      white-space: pre-line;
+    }
+    .location img {
+      max-width: 760px;
+      max-height: 380px;
+      margin: 35px auto;
+      background: #e7e1d8;
+    }
+
+    .contact {
+      text-align: center;
+      background: #eae5dc;
+    }
+    .contact h2 {
+      font-family: var(--serif);
+      font-size: clamp(32px, 5vw, 55px);
+      font-weight: 400;
+      margin: 12px 0;
+    }
+    .contact p {
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .contact-button {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 13px 30px;
+      border: 1px solid var(--ink);
+      font-size: 11px;
+      letter-spacing: 1px;
+    }
+
+    footer {
+      padding: 28px 7%;
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: 1px;
+    }
+
+    @media (max-width: 760px) {
+      .header { padding: 16px 5%; }
+      .logo { font-size: 17px; }
+      .nav { gap: 13px; font-size: 9px; }
+      .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+        padding: 65px 6%;
+        gap: 40px;
+      }
+      .hero h1 { font-size: 72px; }
+      .hero-gallery img { height: 180px; }
+      section { padding: 75px 6%; }
+      .about { grid-template-columns: 1fr; gap: 35px; }
+      .about-gallery img { height: 160px; }
+      .program-grid { grid-template-columns: 1fr; gap: 10px; }
+      footer { flex-direction: column; text-align: center; }
+    }
+  </style>
 </head>
-
 <body>
-<div class="topline"></div>
-<header>
-<div class="wrap nav">
-<a class="brand" href="#home">
-WANT CLASSIC PILATES
-<small>ROMANA'S PILATES STUDIO</small>
-</a>
-<nav class="navlinks">
-<a href="#about">ABOUT</a>
-<a href="#program">PROGRAM</a>
-<a href="#equipment">EQUIPMENT</a>
-<a href="#location">LOCATION</a>
-</nav>
-<a class="nav-cta" href="https://pf.kakao.com/_mPHWb/chat" target="_blank" rel="noopener noreferrer">CONTACT</a>
-</div>
+
+<header class="header">
+  <a class="logo" href="#">
+    WANT CLASSIC PILATES
+    <small>ROMANA'S PILATES STUDIO</small>
+  </a>
+  <nav class="nav">
+    <a href="#about">ABOUT</a>
+    <a href="instructor.html">INSTRUCTOR</a>
+    <a href="#programs">PROGRAM</a>
+    <a href="#location">LOCATION</a>
+  </nav>
 </header>
 
 <main>
-<div class="wrap hero" id="home">
-<div>
-<div class="eyebrow" id="heroEyebrow">CLASSICAL PILATES · SAMSONG</div>
-<h1>WANT<br>CLASSIC<span>정통 클래식 필라테스의 움직임을 배우는 공간</span></h1>
-<p class="hero-copy">삼송역 인근, 클래식 필라테스의 원리와 순서를 바탕으로 움직임을 세심하게 지도합니다. 정확한 컨트롤과 균형을 경험해 보세요.</p>
-</div>
-<div class="hero-photo photo-gallery">
-<img src="/media/images/JYR00989%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpeg" alt="필라테스 스튜디오">
-<img src="/media/images/JYR00991%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpeg" alt="필라테스 수업">
-<img src="/media/images/JYR00999.jpg_8%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpeg" alt="클래식 필라테스">
-<img src="/media/images/JYR01002.jpg_9%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpeg" alt="필라테스 기구">
-</div>
-</div>
+  <div class="hero">
+    <div>
+      <div class="eyebrow" id="heroEyebrow">CLASSICAL PILATES · SAMSONG</div>
+      <h1 id="heroTitle">WANT
+CLASSIC</h1>
+      <div class="hero-subtitle" id="heroSubtitle">정통 클래식 필라테스의 움직임을 배우는 공간</div>
+      <p class="hero-copy" id="heroCopy"></p>
+      <a class="hero-link" href="instructor.html">MEET THE INSTRUCTOR →</a>
+    </div>
+    <div class="hero-gallery" id="heroGallery"></div>
+  </div>
 
-<section class="about" id="about">
-<div class="wrap">
-<div class="section-head">
-<div><div class="eyebrow">ABOUT WANT</div><h2>A CLASSICAL<br>APPROACH.</h2></div>
-<p>WANT CLASSIC PILATES는 정통 클래식 필라테스의 체계와 원리를 소중히 여기며, 각자의 몸과 움직임에 집중하는 수업을 지향합니다.</p>
-</div>
-<div class="about-grid">
-<div class="about-photo photo-gallery">
-<img src="/media/images/JYR00973.jpg_6%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpeg" alt="스튜디오">
-<img src="/media/images/JYM01708.jpg_2%20%E1%84%87%E1%85%A9%E1%86%A8%E1%84%89%E1%85%A1%E1%84%87%E1%85%A9%E1%86%AB.jpeg" alt="필라테스 기구">
-</div>
-<div class="about-text">
-<h3>움직임의 기본으로 돌아가 몸의 가능성을 발견합니다.</h3>
-<p>클래식 필라테스는 정해진 순서와 원리를 바탕으로 전신의 조화로운 움직임을 익혀가는 운동입니다. 정확한 자세와 호흡, 컨트롤을 중요하게 생각하며 수업을 진행합니다.</p>
-<div class="credential"><b>INSTRUCTOR</b>Romana's Pilates Level 5<br>원장 직접 지도 · 모든 과정 뉴욕에서 수료</div>
-</div>
-</div>
-</div>
-</section>
+  <section class="about" id="about">
+    <div>
+      <div class="section-label" id="aboutIntro">ABOUT WANT CLASSIC</div>
+      <h2 class="section-title" id="aboutHeading">The Art of Classical Movement</h2>
+      <p class="about-copy" id="aboutBody"></p>
+    </div>
+    <div class="about-gallery" id="aboutGallery"></div>
+  </section>
 
-<section class="programs" id="program">
-<div class="wrap">
-<div class="section-head">
-<div><div class="eyebrow">OUR PROGRAM</div><h2>PERSONALIZED<br>CLASSICAL TRAINING.</h2></div>
-<p>수업의 형태와 인원에 따라 집중도와 진행 방식이 달라집니다. 시간표와 등록 가능 여부는 상담을 통해 안내해 드립니다.</p>
-</div>
-<div class="cards">
-<article class="card"><div class="num">01 / PRIVATE</div><h3>1:1 개인 레슨</h3><p>한 사람의 움직임과 목표에 집중하는 개인 수업입니다.</p></article>
-<article class="card"><div class="num">02 / DUET</div><h3>2:1 듀엣 레슨</h3><p>두 사람이 함께 클래식 필라테스를 경험하는 수업입니다.</p></article>
-<article class="card"><div class="num">03 / SMALL GROUP</div><h3>3:1 소그룹 레슨</h3><p>소수 인원으로 진행하는 그룹 수업입니다.</p></article>
-</div>
-</div>
-</section>
+  <section class="credential">
+    <div class="section-label">CERTIFICATION</div>
+    <h2 id="credential">Romana's Pilates Level 5</h2>
+    <p id="credentialNote">원장 직접 지도 · 모든 과정 뉴욕에서 수료</p>
+  </section>
 
-<section class="equipment" id="equipment">
-<div class="wrap">
-<div class="section-head">
-<div><div class="eyebrow">CLASSICAL APPARATUS</div><h2>THE APPARATUS.</h2></div>
-<p>다양한 클래식 기구를 활용해 움직임의 원리와 연결을 경험합니다.</p>
-</div>
-<div class="equipment-grid">
-<div class="equip"><strong>Reformer</strong><span>REFORMER WORK</span></div>
-<div class="equip"><strong>Cadillac</strong><span>CADILLAC WORK</span></div>
-<div class="equip"><strong>Electric Chair / Baby Chair / Barrel / Spine corrector / Small barrel</strong><span>CHAIR & BARREL WORK</span></div>
-<div class="equip"><strong>Mat</strong><span>MAT WORK</span></div>
-</div>
-<p class="notice">etc</p>
-</div>
-</section>
+  <section class="programs" id="programs">
+    <div class="section-label">OUR PROGRAMS</div>
+    <h2 class="section-title">Private & Small Group</h2>
+    <div class="program-grid" id="programGrid">
+      <div class="program"><strong>1:1</strong><span>Private Lesson</span></div>
+      <div class="program"><strong>2:1</strong><span>Duet Lesson</span></div>
+      <div class="program"><strong>3:1</strong><span>Small Group Lesson</span></div>
+    </div>
+  </section>
 
-<section class="philosophy">
-<div class="wrap">
-<div class="eyebrow">OUR PHILOSOPHY</div>
-<blockquote>"Move from your powerhouse"</blockquote>
-<p>MOVE WITH PRECISION. BUILD WITH CONTROL.</p>
-</div>
-</section>
+  <section class="equipment">
+    <div class="section-label">CLASSICAL APPARATUS</div>
+    <h2 class="section-title">The Equipment</h2>
+    <div class="equipment-list" id="equipmentList"></div>
+  </section>
 
-<section class="location" id="location">
-<div class="wrap">
-<div class="section-head">
-<div><div class="eyebrow">FIND US</div><h2>LOCATION.</h2></div>
-<p>삼송역 인근에서 WANT CLASSIC PILATES를 만나보세요.</p>
-</div>
-<div class="location-grid">
-<div class="location-photo">
-<img src="/media/images/geminigeneratedimagez8a8v3z8a8v3z8a8jepg.png" alt="WANT CLASSIC PILATES 위치">
-</div>
-<div class="location-info">
-<h3>방문 및 상담 안내</h3>
-<div class="info-row"><b>ADDRESS</b>경기도 고양시 덕양구 동송로33 이편한세상시티1차 2층 12호</div>
-<div class="info-row"><b>HOURS</b>월 10:00 - 22:00
-화 10:00 - 22:00
-수 10:00 - 22:00
-목 10:00 - 22:00
-금 10:00 - 22:00
-토 07:00 - 13:00
-일 정기휴무 (매주 일요일)
+  <section class="location" id="location">
+    <div class="section-label">LOCATION</div>
+    <h2 class="section-title">Visit Our Studio</h2>
+    <p id="address"></p>
+    <p id="hours"></p>
+    <img id="locationImage" alt="WANT CLASSIC PILATES studio location" hidden>
+    <p id="phone"></p>
+    <a class="hero-link" id="instagram" target="_blank" rel="noopener">INSTAGRAM →</a>
+  </section>
 
-*수업시간에 따라 1~2시간 단축영업이나 연장영업 될 수 있습니다.</div>
-<div class="info-row"><b>CONTACT</b><a href="tel:01033230628">010-3323-0628</a></div>
-<div class="info-row"><b>INSTAGRAM</b><a href="https://www.instagram.com/want_classicpilates" target="_blank" rel="noopener">want_classicpilates</a></div>
-<p class="notice">방문 전 예약 및 운영 여부를 확인해 주세요.</p>
-</div>
-</div>
-</div>
-</section>
-
-<section class="contact" id="contact">
-<div class="wrap">
-<div class="eyebrow">START YOUR CLASSICAL JOURNEY</div>
-<h2>Discover the art of classical movement.</h2>
-<p>수업 문의 및 등록 상담은 카카오톡 채널을 통해 안내해 드립니다.</p>
-<a class="btn" href="https://pf.kakao.com/_mPHWb/chat" target="_blank" rel="noopener noreferrer">CONTACT &amp; VISIT</a>
-</div>
-</section>
+  <section class="contact">
+    <div class="section-label">CONTACT</div>
+    <h2 id="contactHeading">Discover the art of classical movement.</h2>
+    <p id="contactCopy">수업 문의 및 등록 상담은 카카오톡 채널을 통해 안내해 드립니다.</p>
+    <a class="contact-button" id="contactButton" target="_blank" rel="noopener">카카오톡 상담하기</a>
+  </section>
 </main>
 
 <footer>
-<div class="wrap footer">
-<span>© WANT CLASSIC PILATES. ALL RIGHTS RESERVED.</span>
-<span>ROMANA'S PILATES STUDIO · SAMSONG, GOYANG</span>
-</div>
+  <span>WANT CLASSIC PILATES</span>
+  <span>ROMANA'S PILATES STUDIO · SAMSONG</span>
 </footer>
+
+<script>
+  const text = (id, value) => {
+    const el = document.getElementById(id);
+    if (el && value !== undefined && value !== null) el.textContent = value;
+  };
+
+  const imageList = (id, images) => {
+    const el = document.getElementById(id);
+    if (!el || !Array.isArray(images)) return;
+    el.innerHTML = "";
+    images.forEach(src => {
+      if (!src) return;
+      const img = document.createElement("img");
+      img.src = src;
+      img.alt = "WANT CLASSIC PILATES";
+      img.loading = "lazy";
+      el.appendChild(img);
+    });
+  };
+
+  async function loadHomepage() {
+    try {
+      const response = await fetch("content/site.json", { cache: "no-store" });
+      if (!response.ok) throw new Error("Homepage content could not be loaded");
+      const data = await response.json();
+
+      [
+        "heroEyebrow", "heroTitle", "heroSubtitle", "heroCopy",
+        "aboutIntro", "aboutHeading", "aboutBody", "credential",
+        "credentialNote", "address", "hours", "phone",
+        "contactHeading", "contactCopy"
+      ].forEach(key => text(key, data[key]));
+
+      imageList("heroGallery", data.heroImages);
+      imageList("aboutGallery", data.aboutImages);
+
+      if (Array.isArray(data.programs)) {
+        const grid = document.getElementById("programGrid");
+        grid.innerHTML = "";
+        data.programs.forEach(item => {
+          const card = document.createElement("div");
+          card.className = "program";
+          const title = document.createElement("strong");
+          const desc = document.createElement("span");
+          title.textContent = item.title || item.name || "";
+          desc.textContent = item.description || item.subtitle || "";
+          card.append(title, desc);
+          grid.appendChild(card);
+        });
+      }
+
+      if (Array.isArray(data.equipment)) {
+        const list = document.getElementById("equipmentList");
+        list.innerHTML = "";
+        data.equipment.forEach(item => {
+          const span = document.createElement("span");
+          span.textContent = typeof item === "string" ? item : (item.name || "");
+          list.appendChild(span);
+        });
+      }
+
+      if (data.locationImage) {
+        const img = document.getElementById("locationImage");
+        img.src = data.locationImage;
+        img.hidden = false;
+      }
+
+      const instagram = document.getElementById("instagram");
+      if (data.instagram) instagram.href = data.instagram;
+      if (data.instagramLabel) instagram.textContent = data.instagramLabel + " →";
+
+      const contact = document.getElementById("contactButton");
+      if (data.contactUrl) contact.href = data.contactUrl;
+      if (data.contactLabel) contact.textContent = data.contactLabel;
+
+      if (data.seoDescription) {
+        document.querySelector('meta[name="description"]').content = data.seoDescription;
+      }
+      if (data.brandName) document.title = data.brandName + " | 삼송역 클래식 필라테스";
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  loadHomepage();
+</script>
 </body>
 </html>
