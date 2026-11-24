@@ -157,3 +157,35 @@ content:
       - name: footerSub
         label: Footer subtitle
         type: string
+
+      # FOUNDER PAGE
+      - name: instructor
+        label: FOUNDER page
+        type: object
+        fields:
+          - name: name
+            label: Founder name
+            type: string
+          - name: profile
+            label: Founder profile introduction
+            type: text
+          - name: credential
+            label: Founder qualifications
+            type: text
+          - name: philosophy
+            label: Teaching philosophy
+            type: text
+          - name: profileImage
+            label: Founder profile photo
+            type: image
+            options:
+              media: images
+              path: want_classic_pilates_cms/media/images
+          - name: gallery
+            label: Founder exercise and teaching photos
+            type: image
+            options:
+              media: images
+              path: want_classic_pilates_cms/media/images
+              multiple:
+                max: 30
