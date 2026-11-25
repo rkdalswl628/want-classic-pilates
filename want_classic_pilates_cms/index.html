@@ -7,6 +7,7 @@
 <title>WANT CLASSIC PILATES | 삼송역 클래식 필라테스</title>
 <meta name="description" content="삼송역 클래식 필라테스 전문 스튜디오 WANT CLASSIC PILATES. Romana's Pilates 기반의 정통 클래식 필라테스를 경험하세요.">
 <meta name="theme-color" content="#f5f2ed">
+
 <style>
 :root {
   --bg:#f5f2ed;
@@ -18,79 +19,325 @@
   --serif:Georgia,"Times New Roman",serif;
   --sans:"Helvetica Neue",Arial,"Apple SD Gothic Neo",sans-serif;
 }
+
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:var(--bg);font-family:var(--sans);line-height:1.7}
+body{
+  margin:0;
+  color:var(--ink);
+  background:var(--bg);
+  font-family:var(--sans);
+  line-height:1.7
+}
 a{color:inherit;text-decoration:none}
-img{display:block;width:100%;object-fit:cover}
+img{
+  display:block;
+  width:100%;
+  object-fit:cover
+}
+img[hidden]{display:none!important}
 button{font:inherit}
+
 .header{
-  position:sticky;top:0;z-index:20;
-  display:flex;align-items:center;justify-content:space-between;
-  padding:20px 7%;background:rgba(245,242,237,.94);
-  border-bottom:1px solid var(--line);backdrop-filter:blur(12px)
+  position:sticky;
+  top:0;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:20px 7%;
+  background:rgba(245,242,237,.94);
+  border-bottom:1px solid var(--line);
+  backdrop-filter:blur(12px)
 }
-.logo{font-family:var(--serif);font-size:21px;letter-spacing:2px;line-height:1.2}
-.logo small{display:block;margin-top:5px;font-family:var(--sans);font-size:9px;letter-spacing:2.5px;color:var(--muted)}
-.nav{display:flex;gap:30px;align-items:center;font-size:11px;letter-spacing:1.5px}
+.logo{
+  font-family:var(--serif);
+  font-size:21px;
+  letter-spacing:2px;
+  line-height:1.2
+}
+.logo small{
+  display:block;
+  margin-top:5px;
+  font-family:var(--sans);
+  font-size:9px;
+  letter-spacing:2.5px;
+  color:var(--muted)
+}
+.nav{
+  display:flex;
+  gap:30px;
+  align-items:center;
+  font-size:11px;
+  letter-spacing:1.5px
+}
 .nav a:hover{color:var(--accent)}
+
 .hero{
-  min-height:690px;display:grid;grid-template-columns:43% 57%;
-  padding:45px 7% 65px;gap:5%;align-items:center
+  min-height:690px;
+  display:grid;
+  grid-template-columns:43% 57%;
+  padding:45px 7% 65px;
+  gap:5%;
+  align-items:center
 }
-.eyebrow{color:var(--accent);font-size:10px;letter-spacing:3px;text-transform:uppercase}
+.eyebrow{
+  color:var(--accent);
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase
+}
 .hero h1{
-  margin:22px 0;font-family:var(--serif);
-  font-size:clamp(58px,8vw,112px);line-height:.92;
-  font-weight:400;letter-spacing:-3px;white-space:pre-line
+  margin:22px 0;
+  font-family:var(--serif);
+  font-size:clamp(58px,8vw,112px);
+  line-height:.92;
+  font-weight:400;
+  letter-spacing:-3px;
+  white-space:pre-line
 }
-.hero-subtitle{font-size:16px;letter-spacing:1px;margin-bottom:18px}
-.hero-copy{max-width:390px;color:var(--muted);font-size:13px;line-height:2}
-.hero-link{display:inline-block;margin-top:28px;padding-bottom:7px;border-bottom:1px solid var(--ink);font-size:10px;letter-spacing:2px}
-.hero-gallery{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-items:center}
-.hero-gallery img{height:245px;background:#e7e1d8}
-.hero-gallery img:nth-child(2),.hero-gallery img:nth-child(4){margin-top:38px}
+.hero-subtitle{
+  font-size:16px;
+  letter-spacing:1px;
+  margin-bottom:18px
+}
+.hero-copy{
+  max-width:390px;
+  color:var(--muted);
+  font-size:13px;
+  line-height:2
+}
+.hero-link{
+  display:inline-block;
+  margin-top:28px;
+  padding-bottom:7px;
+  border-bottom:1px solid var(--ink);
+  font-size:10px;
+  letter-spacing:2px
+}
+.hero-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  align-items:center
+}
+.hero-gallery img{
+  height:245px;
+  background:#e7e1d8
+}
+.hero-gallery img:nth-child(2),
+.hero-gallery img:nth-child(4){margin-top:38px}
+
 section{padding:100px 7%}
-.section-label{color:var(--accent);font-size:10px;letter-spacing:3px;margin-bottom:15px}
-.section-title{font-family:var(--serif);font-size:clamp(36px,5vw,58px);font-weight:400;line-height:1.15;margin:0 0 25px}
-.about{background:var(--paper);display:grid;grid-template-columns:1fr 1fr;gap:8%;align-items:center}
-.about-copy{color:var(--muted);font-size:13px;line-height:2.1;white-space:pre-line}
-.about-gallery{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.section-label{
+  color:var(--accent);
+  font-size:10px;
+  letter-spacing:3px;
+  margin-bottom:15px
+}
+.section-title{
+  font-family:var(--serif);
+  font-size:clamp(36px,5vw,58px);
+  font-weight:400;
+  line-height:1.15;
+  margin:0 0 25px
+}
+
+.about{
+  background:var(--paper);
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:8%;
+  align-items:center
+}
+.about-copy{
+  color:var(--muted);
+  font-size:13px;
+  line-height:2.1;
+  white-space:pre-line
+}
+.about-gallery{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px
+}
 .about-gallery img{height:220px}
-.credential{text-align:center;background:#eae5dc}
-.credential h2{font-family:var(--serif);font-size:clamp(30px,4vw,46px);font-weight:400;margin:12px 0}
-.credential p{color:var(--muted);font-size:12px}
+
+.credential{
+  text-align:center;
+  background:#eae5dc
+}
+.credential h2{
+  font-family:var(--serif);
+  font-size:clamp(30px,4vw,46px);
+  font-weight:400;
+  margin:12px 0
+}
+.credential p{
+  color:var(--muted);
+  font-size:12px
+}
+
 .programs{text-align:center}
-.program-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:45px}
-.program{border:1px solid var(--line);padding:38px 20px}
-.program strong{display:block;font-family:var(--serif);font-size:30px;font-weight:400;margin-bottom:10px}
-.program span{color:var(--muted);font-size:12px}
-.equipment{background:var(--paper);text-align:center}
-.equipment-list{max-width:750px;margin:35px auto 0;display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
-.equipment-list span{border:1px solid var(--line);padding:10px 20px;color:var(--muted);font-size:12px}
+.program-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  margin-top:45px
+}
+.program{
+  border:1px solid var(--line);
+  padding:38px 20px
+}
+.program strong{
+  display:block;
+  font-family:var(--serif);
+  font-size:30px;
+  font-weight:400;
+  margin-bottom:10px
+}
+.program span{
+  color:var(--muted);
+  font-size:12px
+}
+
+/* EQUIPMENT */
+.equipment{
+  background:var(--paper);
+  text-align:center
+}
+.equipment-intro{
+  max-width:650px;
+  margin:0 auto;
+  color:var(--muted);
+  font-size:13px;
+  line-height:2
+}
+.equipment-list{
+  max-width:850px;
+  margin:35px auto 0;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px
+}
+.equipment-list span{
+  border:1px solid var(--line);
+  padding:12px 22px;
+  color:var(--muted);
+  font-size:12px;
+  line-height:1.8
+}
+.equipment-note{
+  margin-top:22px;
+  color:var(--muted);
+  font-size:11px;
+  white-space:pre-line
+}
+
+/* LOCATION */
 .location{text-align:center}
-.location p{color:var(--muted);font-size:13px;white-space:pre-line}
-.location img{max-width:760px;max-height:380px;margin:35px auto;background:#e7e1d8}
-.contact{text-align:center;background:#eae5dc}
-.contact h2{font-family:var(--serif);font-size:clamp(32px,5vw,55px);font-weight:400;margin:12px 0}
-.contact p{color:var(--muted);font-size:13px}
-.contact-button{display:inline-block;margin-top:25px;padding:13px 30px;border:1px solid var(--ink);font-size:11px;letter-spacing:1px}
-footer{padding:28px 7%;display:flex;justify-content:space-between;gap:15px;color:var(--muted);font-size:10px;letter-spacing:1px}
+.location-intro,
+.location p{
+  color:var(--muted);
+  font-size:13px;
+  white-space:pre-line
+}
+.location-map{
+  display:block;
+  width:100%;
+  max-width:760px;
+  height:auto;
+  max-height:none;
+  margin:35px auto;
+  background:#e7e1d8;
+  object-fit:contain
+}
+.location-note{
+  margin-top:20px;
+  font-size:11px!important
+}
+
+.contact{
+  text-align:center;
+  background:#eae5dc
+}
+.contact h2{
+  font-family:var(--serif);
+  font-size:clamp(32px,5vw,55px);
+  font-weight:400;
+  margin:12px 0
+}
+.contact p{
+  color:var(--muted);
+  font-size:13px
+}
+.contact-button{
+  display:inline-block;
+  margin-top:25px;
+  padding:13px 30px;
+  border:1px solid var(--ink);
+  font-size:11px;
+  letter-spacing:1px
+}
+
+footer{
+  padding:28px 7%;
+  display:flex;
+  justify-content:space-between;
+  gap:15px;
+  color:var(--muted);
+  font-size:10px;
+  letter-spacing:1px
+}
+
 @media(max-width:760px){
   .header{padding:16px 5%}
   .logo{font-size:17px}
   .nav{gap:13px;font-size:9px}
-  .hero{min-height:auto;grid-template-columns:1fr;padding:65px 6%;gap:40px}
+
+  .hero{
+    min-height:auto;
+    grid-template-columns:1fr;
+    padding:65px 6%;
+    gap:40px
+  }
   .hero h1{font-size:72px}
   .hero-gallery img{height:180px}
+
   section{padding:75px 6%}
-  .about{grid-template-columns:1fr;gap:35px}
+
+  .about{
+    grid-template-columns:1fr;
+    gap:35px
+  }
   .about-gallery img{height:160px}
-  .program-grid{grid-template-columns:1fr;gap:10px}
-  footer{flex-direction:column;text-align:center}
+
+  .program-grid{
+    grid-template-columns:1fr;
+    gap:10px
+  }
+
+  .equipment-list{
+    gap:9px
+  }
+  .equipment-list span{
+    padding:10px 15px
+  }
+
+  .location-map{
+    width:100%;
+    max-height:none
+  }
+
+  footer{
+    flex-direction:column;
+    text-align:center
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header class="header">
@@ -98,6 +345,7 @@ footer{padding:28px 7%;display:flex;justify-content:space-between;gap:15px;color
     WANT CLASSIC PILATES
     <small>ROMANA'S PILATES STUDIO</small>
   </a>
+
   <nav class="nav">
     <a href="#about">ABOUT</a>
     <a href="instructor.html">FOUNDER</a>
@@ -107,6 +355,7 @@ footer{padding:28px 7%;display:flex;justify-content:space-between;gap:15px;color
 </header>
 
 <main>
+
 <div class="hero">
   <div>
     <div class="eyebrow" id="heroEyebrow">CLASSICAL PILATES · SAMSONG</div>
@@ -116,6 +365,7 @@ CLASSIC</h1>
     <p class="hero-copy" id="heroCopy"></p>
     <a class="hero-link" href="instructor.html">MEET THE FOUNDER →</a>
   </div>
+
   <div class="hero-gallery" id="heroGallery"></div>
 </div>
 
@@ -125,6 +375,7 @@ CLASSIC</h1>
     <h2 class="section-title" id="aboutHeading">The Art of Classical Movement</h2>
     <p class="about-copy" id="aboutBody"></p>
   </div>
+
   <div class="about-gallery" id="aboutGallery"></div>
 </section>
 
@@ -137,35 +388,82 @@ CLASSIC</h1>
 <section class="programs" id="programs">
   <div class="section-label">OUR PROGRAMS</div>
   <h2 class="section-title">Private & Small Group</h2>
+
   <div class="program-grid" id="programGrid">
-    <div class="program"><strong>1:1</strong><span>Private Lesson</span></div>
-    <div class="program"><strong>2:1</strong><span>Duet Lesson</span></div>
-    <div class="program"><strong>3:1</strong><span>Small Group Lesson</span></div>
+    <div class="program">
+      <strong>1:1</strong>
+      <span>Private Lesson</span>
+    </div>
+    <div class="program">
+      <strong>2:1</strong>
+      <span>Duet Lesson</span>
+    </div>
+    <div class="program">
+      <strong>3:1</strong>
+      <span>Small Group Lesson</span>
+    </div>
   </div>
 </section>
 
 <section class="equipment">
   <div class="section-label">CLASSICAL APPARATUS</div>
   <h2 class="section-title">The Equipment</h2>
-  <div class="equipment-list" id="equipmentList"></div>
+
+  <p class="equipment-intro" id="equipmentIntro">
+    다양한 클래식 기구를 활용해 움직임의 원리와 연결을 경험합니다.
+  </p>
+
+  <div class="equipment-list" id="equipmentList">
+    <span>Reformer</span>
+    <span>Cadillac</span>
+    <span>Electric Chair / Baby Chair / Barrel / Spine corrector / Small barrel</span>
+    <span>Mat</span>
+  </div>
+
+  <p class="equipment-note" id="equipmentNote"></p>
 </section>
 
 <section class="location" id="location">
   <div class="section-label">LOCATION</div>
   <h2 class="section-title">Visit Our Studio</h2>
+
+  <p class="location-intro" id="locationIntro">
+    삼송역 인근에서 WANT CLASSIC PILATES를 만나보세요.
+  </p>
+
   <p id="address"></p>
   <p id="hours"></p>
-  <img id="locationImage" alt="WANT CLASSIC PILATES studio location" hidden>
+
+  <img
+    id="locationImage"
+    class="location-map"
+    alt="WANT CLASSIC PILATES studio location"
+    hidden
+  >
+
+  <p id="locationNote" class="location-note"></p>
   <p id="phone"></p>
-  <a class="hero-link" id="instagram" target="_blank" rel="noopener">INSTAGRAM →</a>
+
+  <a
+    class="hero-link"
+    id="instagram"
+    target="_blank"
+    rel="noopener"
+  >INSTAGRAM →</a>
 </section>
 
 <section class="contact">
   <div class="section-label">CONTACT</div>
   <h2 id="contactHeading">Discover the art of classical movement.</h2>
   <p id="contactCopy">수업 문의 및 등록 상담은 카카오톡 채널을 통해 안내해 드립니다.</p>
-  <a class="contact-button" id="contactButton" target="_blank" rel="noopener">카카오톡 상담하기</a>
+  <a
+    class="contact-button"
+    id="contactButton"
+    target="_blank"
+    rel="noopener"
+  >카카오톡 상담하기</a>
 </section>
+
 </main>
 
 <footer>
@@ -174,91 +472,159 @@ CLASSIC</h1>
 </footer>
 
 <script>
-const setText = (id,value) => {
-  const el=document.getElementById(id);
-  if(el && value!==undefined && value!==null) el.textContent=value;
+const setText = (id, value) => {
+  const el = document.getElementById(id);
+
+  if (el && value !== undefined && value !== null) {
+    el.textContent = value;
+  }
 };
 
-const imageList = (id,images) => {
-  const el=document.getElementById(id);
-  if(!el || !Array.isArray(images)) return;
-  el.innerHTML="";
-  images.forEach(src=>{
-    if(!src) return;
-    const img=document.createElement("img");
-    img.src=src;
-    img.alt="WANT CLASSIC PILATES";
-    img.loading="lazy";
+const imageList = (id, images) => {
+  const el = document.getElementById(id);
+
+  if (!el || !Array.isArray(images)) return;
+
+  el.innerHTML = "";
+
+  images.forEach(src => {
+    if (!src) return;
+
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "WANT CLASSIC PILATES";
+    img.loading = "lazy";
+
     el.appendChild(img);
   });
 };
 
-async function loadHomepage(){
-  try{
-    const response=await fetch("content/site.json",{cache:"no-store"});
-    if(!response.ok) throw new Error("Homepage content could not be loaded");
-    const data=await response.json();
+async function loadHomepage() {
+  try {
+    const response = await fetch("/content/site.json", {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error("Homepage content could not be loaded");
+    }
+
+    const data = await response.json();
 
     [
-      "heroEyebrow","heroTitle","heroSubtitle","heroCopy",
-      "aboutIntro","aboutHeading","aboutBody","credential",
-      "credentialNote","address","hours","phone",
-      "contactHeading","contactCopy"
-    ].forEach(key=>setText(key,data[key]));
+      "heroEyebrow",
+      "heroTitle",
+      "heroSubtitle",
+      "heroCopy",
+      "aboutIntro",
+      "aboutHeading",
+      "aboutBody",
+      "credential",
+      "credentialNote",
+      "address",
+      "hours",
+      "phone",
+      "contactHeading",
+      "contactCopy",
 
-    imageList("heroGallery",data.heroImages);
-    imageList("aboutGallery",data.aboutImages);
+      /* EQUIPMENT */
+      "equipmentIntro",
+      "e1",
+      "e2",
+      "e3",
+      "e4",
+      "equipmentNote",
 
-    if(Array.isArray(data.programs)){
-      const grid=document.getElementById("programGrid");
-      grid.innerHTML="";
-      data.programs.forEach(item=>{
-        const card=document.createElement("div");
-        card.className="program";
-        const title=document.createElement("strong");
-        const desc=document.createElement("span");
-        title.textContent=item.title||item.name||"";
-        desc.textContent=item.description||item.subtitle||"";
-        card.append(title,desc);
+      /* LOCATION */
+      "locationIntro",
+      "locationNote"
+    ].forEach(key => setText(key, data[key]));
+
+    /* HERO AND ABOUT IMAGES */
+    imageList("heroGallery", data.heroImages);
+    imageList("aboutGallery", data.aboutImages);
+
+    /* PROGRAMS */
+    if (Array.isArray(data.programs)) {
+      const grid = document.getElementById("programGrid");
+      grid.innerHTML = "";
+
+      data.programs.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "program";
+
+        const title = document.createElement("strong");
+        const desc = document.createElement("span");
+
+        title.textContent = item.title || item.name || "";
+        desc.textContent = item.description || item.subtitle || "";
+
+        card.append(title, desc);
         grid.appendChild(card);
       });
     }
 
-    if(Array.isArray(data.equipment)){
-      const list=document.getElementById("equipmentList");
-      list.innerHTML="";
-      data.equipment.forEach(item=>{
-        const span=document.createElement("span");
-        span.textContent=typeof item==="string"?item:(item.name||"");
-        list.appendChild(span);
-      });
+    /* EQUIPMENT */
+    const equipmentList = document.getElementById("equipmentList");
+    equipmentList.innerHTML = "";
+
+    ["e1", "e2", "e3", "e4"].forEach(key => {
+      const value = data[key];
+
+      if (!value) return;
+
+      const span = document.createElement("span");
+      span.textContent = value;
+      equipmentList.appendChild(span);
+    });
+
+    /* LOCATION MAP IMAGE */
+    if (data.locationImage) {
+      const img = document.getElementById("locationImage");
+      img.src = data.locationImage;
+      img.hidden = false;
     }
 
-    if(data.locationImage){
-      const img=document.getElementById("locationImage");
-      img.src=data.locationImage;
-      img.hidden=false;
+    /* INSTAGRAM */
+    const instagram = document.getElementById("instagram");
+
+    if (data.instagram) {
+      instagram.href = data.instagram;
     }
 
-    const instagram=document.getElementById("instagram");
-    if(data.instagram) instagram.href=data.instagram;
-    if(data.instagramLabel) instagram.textContent=data.instagramLabel+" →";
-
-    const contact=document.getElementById("contactButton");
-    if(data.contactUrl) contact.href=data.contactUrl;
-    if(data.contactLabel) contact.textContent=data.contactLabel;
-
-    if(data.seoDescription){
-      document.querySelector('meta[name="description"]').content=data.seoDescription;
+    if (data.instagramText) {
+      instagram.textContent = data.instagramText + " →";
     }
-    if(data.brandName){
-      document.title=data.brandName+" | 삼송역 클래식 필라테스";
+
+    /* CONTACT */
+    const contact = document.getElementById("contactButton");
+
+    if (data.contactUrl) {
+      contact.href = data.contactUrl;
     }
-  }catch(error){
-    console.error(error);
+
+    if (data.contactLabel) {
+      contact.textContent = data.contactLabel;
+    }
+
+    /* SEO */
+    if (data.seoDescription) {
+      document.querySelector('meta[name="description"]').content =
+        data.seoDescription;
+    }
+
+    if (data.brandName) {
+      document.title =
+        data.brandName + " | 삼송역 클래식 필라테스";
+    }
+
+  } catch (error) {
+    console.error("Homepage loading failed:", error);
   }
 }
+
 loadHomepage();
 </script>
+
 </body>
 </html>
